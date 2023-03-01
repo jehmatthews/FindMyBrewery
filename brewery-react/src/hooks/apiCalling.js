@@ -1,23 +1,33 @@
-import { useState, useEffect } from "react";
+import React, { Component } from 'react';
 import axios from 'axios';
 
+class BreweryInfo extends Component {
+  state = {
+    brewery: {}
+  };
 
-const nameHere = function() {
-axios.get(`https://api.openbrewerydb.org/breweries/10-56-brewing-company-knox`)
-.then(function(response) {
-  console.log('hello')
-  console.log(response)
-  return (
-    <p>
-      {response.name}
-    </p>
-  )
-  })
-  console.log('hello test')
+  componentDidMount() {
+    axios.get('https://api.openbrewerydb.org/breweries/10-56-brewing-company-knox')
+      .then(response => {
+        this.setState({ brewery: response.data });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 
+  render() {
+    const { brewery } = this.state;
+
+    return (
+      <div>
+        <h1>{brewery.name}</h1>
+        <p>{brewery.city}</p>
+        <p>{brewery.state}</p>
+      </div>
+    );
+  }
 }
 
-export default nameHere;
-
-
+export default BreweryInfo;
 

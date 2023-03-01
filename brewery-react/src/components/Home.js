@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 
-function Home() {
+function Home(props) {
   return (
     <div>
       <Navigation />
