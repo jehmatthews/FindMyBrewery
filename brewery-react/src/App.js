@@ -13,9 +13,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home/>}>
         </Route>
-        <Route path='breweries' element={<BreweryList/>}>
+        <Route path='/breweries' element={<BreweryList/>}>
         </Route>
-        <Route path='brewery/random' element={<RandomBrewery/>}>
+        <Route path='/brewery/random' element={<RandomBrewery/>}>
         </Route>
       </Routes>
     </BrowserRouter>
