@@ -3,6 +3,7 @@ import React from 'react';
 function Navigation() {
   return (
     <nav>
+      <h1>FindMyBrewery!</h1>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/breweries">List of Breweries</a></li>
