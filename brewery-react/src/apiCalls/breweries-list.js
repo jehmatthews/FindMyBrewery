@@ -42,7 +42,7 @@ function BreweryList(props) {
                 Brewery Website:
                 <a target="_blank" href={brewery.website_url}>
                   {" "}
-                  Website Unavailable :(
+                  Website Unavailable 
                 </a>
               </p>
             )}

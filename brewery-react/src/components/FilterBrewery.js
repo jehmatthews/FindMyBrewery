@@ -30,6 +30,7 @@ export default function BreweryFilter() {
             onChange={(e) => setCity(e.target.value)}
           />
         </label>
+        <br/>
         <label>
           State:
           <input
@@ -38,6 +39,7 @@ export default function BreweryFilter() {
             onChange={(e) => setState(e.target.value)}
           />
         </label>
+        <br/>
         <label>
           Country:
           <input
@@ -46,6 +48,7 @@ export default function BreweryFilter() {
             onChange={(e) => setCountry(e.target.value)}
           />
         </label>
+        <br/>
         <button type="submit">Filter Breweries</button>
       </form>
       {breweries.length > 0 ? (
@@ -74,7 +77,7 @@ export default function BreweryFilter() {
                   Brewery Website:
                   <a target="_blank" href={brewery.website_url}>
                     {" "}
-                    Website Unavailable :(
+                    Website Unavailable 
                   </a>
                 </p>
               )}
