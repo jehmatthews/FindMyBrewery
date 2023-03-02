@@ -6,6 +6,7 @@ function Navigation() {
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/breweries">List of Breweries</a></li>
+        <li><a href='/brewery/filter'>Filter Breweries</a></li>
         <li><a href="/brewery/random">Random Brewery!</a></li>
       </ul>
     </nav>
