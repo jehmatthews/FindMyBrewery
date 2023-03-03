@@ -20,7 +20,7 @@ function BreweryList(props) {
       <ul>
         {breweries.map((brewery) => (
           <li key={brewery.id}>
-            {brewery.name}
+                   <a href={`/brewery/${brewery.id}`}>{brewery.name}</a>
             <p>Brewery Type: {brewery.brewery_type}</p>
             <p>Brewery Location: {brewery.street}</p>
             <p>Brewery City: {brewery.city}</p>
