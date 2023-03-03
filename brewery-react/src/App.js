@@ -5,9 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import BreweryList from "./apiCalls/breweries-list";
 import RandomBrewery from "./apiCalls/brewery-random";
-
 import BreweryFilter from "./components/FilterBrewery";
 import FilteredBreweries from "./apiCalls/filtered-breweries";
+import LoginPage from "./components/loginPage";
 import SingleBrewery from "./apiCalls/single-brewery";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,7 +15,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<LoginPage />}></Route>
+        <Route path="/home" element={<Home />}></Route>
         <Route path="/breweries" element={<BreweryList />}></Route>
         <Route path="/brewery/random" element={<RandomBrewery />} />
         <Route path="/brewery/filter" element={<BreweryFilter />}></Route>
