@@ -30,7 +30,7 @@ export default function BreweryFilter() {
             onChange={(e) => setCity(e.target.value)}
           />
         </label>
-        <br/>
+        <br />
         <label>
           State:
           <input
@@ -39,7 +39,7 @@ export default function BreweryFilter() {
             onChange={(e) => setState(e.target.value)}
           />
         </label>
-        <br/>
+        <br />
         <label>
           Country:
           <input
@@ -48,14 +48,14 @@ export default function BreweryFilter() {
             onChange={(e) => setCountry(e.target.value)}
           />
         </label>
-        <br/>
+        <br />
         <button type="submit">Filter Breweries</button>
       </form>
       {breweries.length > 0 ? (
         <ul>
           {breweries.map((brewery) => (
             <li key={brewery.id}>
-              {brewery.name}
+              <a href={`/brewery/${brewery.id}`}>{brewery.name}</a>
               <p>Brewery Type: {brewery.brewery_type}</p>
               <p>Brewery Location: {brewery.street}</p>
               <p>Brewery City: {brewery.city}</p>
@@ -77,7 +77,7 @@ export default function BreweryFilter() {
                   Brewery Website:
                   <a target="_blank" href={brewery.website_url}>
                     {" "}
-                    Website Unavailable 
+                    Website Unavailable
                   </a>
                 </p>
               )}

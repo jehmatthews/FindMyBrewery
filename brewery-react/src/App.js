@@ -8,6 +8,7 @@ import RandomBrewery from "./apiCalls/brewery-random";
 import BreweryFilter from "./components/FilterBrewery";
 import FilteredBreweries from "./apiCalls/filtered-breweries";
 import LoginPage from "./components/loginPage";
+import SingleBrewery from "./apiCalls/single-brewery";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 export default function App() {
@@ -17,12 +18,13 @@ export default function App() {
         <Route path="/" element={<LoginPage />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/breweries" element={<BreweryList />}></Route>
-        <Route path="/brewery/random" element={<RandomBrewery />}></Route>
+        <Route path="/brewery/random" element={<RandomBrewery />} />
         <Route path="/brewery/filter" element={<BreweryFilter />}></Route>
         <Route
           path="/breweries/filtered"
           element={<FilteredBreweries />}
         ></Route>
+        <Route path="/brewery/:id" element={<SingleBrewery />} />
       </Routes>
     </BrowserRouter>
   );
