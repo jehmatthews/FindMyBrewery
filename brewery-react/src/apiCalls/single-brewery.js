@@ -3,10 +3,12 @@ import axios from "axios";
 import Navigation from "../components/Navigation";
 import { useLocation, useParams } from "react-router-dom";
 
+
 function SingleBrewery(props) {
   const params = useParams();
   const paramsID = params.id;
   const [brewery, setBreweries] = useState([]);
+
 
   useEffect(() => {
     axios
