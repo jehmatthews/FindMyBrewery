@@ -1,10 +1,11 @@
 const db = require('../connection');
 
 // function that uses a query and promises to insert into the database
-const addFavBrewery = function(id) {
-  return db.query(`INSERT INTO favourites (guest_id, brewery_id)
-  VALUES ($1, $2) RETURNING *`, [id.guest_id, id.brewery_id])
+  function addFavBrewery(id) {
+  return db.query(`INSERT INTO user_favourites (guest_id, brewery_id)
+  VALUES ($1, $2) RETURNING *`, [1, id])
   .then((results) => {
+    console.log(results.rows)
     return results.rows
   })
   .catch((error) => {
@@ -12,4 +13,4 @@ const addFavBrewery = function(id) {
   });
 };
 
-module.exports = { addFavBrewery }
+module.exports = addFavBrewery;
