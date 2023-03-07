@@ -11,7 +11,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE breweries (
-  id SERIAL PRIMARY KEY NOT NULL,
+  id VARCHAR(255),
   name VARCHAR(255),
   street VARCHAR(255),
   city VARCHAR(255),

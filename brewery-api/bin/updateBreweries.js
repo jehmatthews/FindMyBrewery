@@ -9,6 +9,7 @@ for (let i = 1; i <= 163; i++) {
     .then(data => {
       // Insert the data into the breweries table
       const values = data.map(brewery => `(
+            '${brewery.id ? brewery.id.replace(/'/g, "''") : null}', 
             '${brewery.name ? brewery.name.replace(/'/g, "''") : null}', 
             '${brewery.street ? brewery.street.replace(/'/g, "''") : null}', 
             '${brewery.city ? brewery.city.replace(/'/g, "''") : null}', 
@@ -20,6 +21,7 @@ for (let i = 1; i <= 163; i++) {
         )`).join(',');
       const content = `
         INSERT INTO breweries (
+            id,
             name,
             street,
             city,
