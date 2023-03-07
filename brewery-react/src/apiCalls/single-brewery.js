@@ -3,10 +3,12 @@ import axios from "axios";
 import Navigation from "../components/Navigation";
 import { useLocation, useParams } from "react-router-dom";
 
+
 function SingleBrewery(props) {
   const params = useParams();
   const peramsID = params.id;
   const [brewery, setBreweries] = useState([]);
+
 
   useEffect(() => {
     axios
@@ -36,6 +38,7 @@ function SingleBrewery(props) {
             {brewery.name}
           </a>
         </p>
+        <button>Add to Favourites</button>
       </ul>
     </div>
   );
