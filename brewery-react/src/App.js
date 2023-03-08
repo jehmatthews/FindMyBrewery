@@ -10,7 +10,7 @@ import FilteredBreweries from "./apiCalls/filtered-breweries";
 import LoginPage from "./components/loginPage";
 import SingleBrewery from "./apiCalls/single-brewery";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -30,4 +30,3 @@ export default function App() {
   );
 }
 
-root.render(<App />);
