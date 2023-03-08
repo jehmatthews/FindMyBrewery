@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const breweryRouter = require('./routes/application');
+const favouritesRouter = require('./routes/favourites');
 
 const app = express();
 
@@ -20,6 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/breweries', breweryRouter);
+app.use('/api/breweries',favouritesRouter);
+
 
 
 // catch 404 and forward to error handler
