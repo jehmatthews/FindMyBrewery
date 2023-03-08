@@ -4,12 +4,10 @@ import Navigation from "../components/Navigation";
 import { useLocation, useParams } from "react-router-dom";
 import insertBrewery from "../helpers/insertBrewery";
 
-
 function SingleBrewery(props) {
   const params = useParams();
   const paramsID = params.id;
   const [brewery, setBreweries] = useState([]);
-
 
   useEffect(() => {
     axios
@@ -32,14 +30,30 @@ function SingleBrewery(props) {
           Brewery Phone #:
           <a href="tel:"> {brewery.phone}</a>
         </p>
-        <p>
-          Brewery Website:
-          <a target="_blank" href={brewery.website_url}>
-            {" "}
-            {brewery.name}
-          </a>
-        </p>
-        <button onClick={() => {insertBrewery(paramsID)}}>Add to Favourites</button>
+        {brewery.website_url ? (
+          <p>
+            Brewery Website:
+            <a target="_blank" href={brewery.website_url}>
+              {" "}
+              {brewery.name}
+            </a>
+          </p>
+        ) : (
+          <p>
+            Brewery Website:
+            <a target="_blank" href={brewery.website_url}>
+              {" "}
+              Website Unavailable
+            </a>
+          </p>
+        )}
+        <button
+          onClick={() => {
+            insertBrewery(paramsID);
+          }}
+        >
+          Add to Favourites
+        </button>
       </ul>
     </div>
   );

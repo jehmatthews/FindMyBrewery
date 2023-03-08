@@ -31,15 +31,37 @@ function RandomBrewery() {
               Brewery Phone #:
               <a href="tel:"> {brewery.phone}</a>
             </p>
-            <p>
-              Brewery Website:
-              <a target="_blank" href={brewery.website_url}>
-                {" "}
-                {brewery.name}
-              </a>
-            </p>
-            <button onClick={() => {insertBrewery(brewery.id)}}>Add to Favourites</button>
-            <button onClick={() => {window.location.reload();}}>Randomize!</button>
+            {brewery.website_url ? (
+              <p>
+                Brewery Website:
+                <a target="_blank" href={brewery.website_url}>
+                  {" "}
+                  {brewery.name}
+                </a>
+              </p>
+            ) : (
+              <p>
+                Brewery Website:
+                <a target="_blank" href={brewery.website_url}>
+                  {" "}
+                  Website Unavailable
+                </a>
+              </p>
+            )}
+            <button
+              onClick={() => {
+                insertBrewery(brewery.id);
+              }}
+            >
+              Add to Favourites
+            </button>
+            <button
+              onClick={() => {
+                window.location.reload();
+              }}
+            >
+              Randomize!
+            </button>
           </li>
         ))}
       </ul>
