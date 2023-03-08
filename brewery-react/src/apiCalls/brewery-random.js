@@ -39,7 +39,7 @@ function RandomBrewery() {
               </a>
             </p>
             <button onClick={() => {insertBrewery(brewery.id)}}>Add to Favourites</button>
-            <button onClick={() => {window.location.reload();}}>Radomize!</button>
+            <button onClick={() => {window.location.reload();}}>Randomize!</button>
           </li>
         ))}
       </ul>
