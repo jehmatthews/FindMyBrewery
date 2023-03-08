@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../components/Navigation";
+import insertBrewery from "../helpers/insertBrewery";
 
 function RandomBrewery() {
   const [breweries, setBreweries] = useState([]);
@@ -37,6 +38,8 @@ function RandomBrewery() {
                 {brewery.name}
               </a>
             </p>
+            <button onClick={() => {insertBrewery(brewery.id)}}>Add to Favourites</button>
+            <button onClick={() => {window.location.reload();}}>Radomize!</button>
           </li>
         ))}
       </ul>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../components/Navigation";
 import { useLocation, useParams } from "react-router-dom";
+import insertBrewery from "../helpers/insertBrewery";
 
 
 function SingleBrewery(props) {
@@ -16,13 +17,6 @@ function SingleBrewery(props) {
       .then((reponse) => setBreweries(reponse.data))
       .catch((error) => console.log(error));
   }, []);
-
-  const insertBrewery = () => {
-    axios.post('/api/breweries/insert', {
-      brewery: paramsID
-    });
-    console.log("it worked!")
-};
 
   return (
     <div>
@@ -45,7 +39,7 @@ function SingleBrewery(props) {
             {brewery.name}
           </a>
         </p>
-        <button onClick={() => {insertBrewery()}}>Add to Favourites</button>
+        <button onClick={() => {insertBrewery(paramsID)}}>Add to Favourites</button>
       </ul>
     </div>
   );
