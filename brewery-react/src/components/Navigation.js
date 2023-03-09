@@ -1,17 +1,25 @@
 import React from 'react';
+import '../styles/navigation.scss';
 
 function Navigation() {
   return (
     <nav>
-      <h1>FindMyBrewery!</h1>
-      <h2>Logged in as: insert user here</h2>
-      <ul>
-        <li><a href="/home">Home</a></li>
-        <li><a href="/breweries">List of Breweries</a></li>
-        <li><a href='/brewery/filter'>Filter Breweries</a></li>
-        <li><a href="/brewery/random">Random Brewery!</a></li>
-        <li><a href='/'>Logout</a></li>
-      </ul>
+      <div className="nav-container">
+        <h1 className="logo">FindMyBrewery</h1>
+        <div className="nav-menu">
+          <h2 className="username">Hello, King</h2>
+          <div className="dropdown">
+            <button className="dropbtn">Menu ☰</button>
+            <div className="dropdown-content">
+              <a href="/home">Home</a>
+              <a href="/breweries">List of Breweries</a>
+              <a href='/brewery/filter'>Filter Breweries</a>
+              <a href="/brewery/random">Random Brewery!</a>
+              <a href='/'>Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

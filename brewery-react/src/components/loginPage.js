@@ -1,20 +1,23 @@
 import React from "react";
 import { redirect } from "react-router-dom";
+import '../styles/login.scss';
+import Navigation from './Navigation';
 
-export default function LoginPage(){
-  return(
-    <div>
-      <h1>FindMyBrewery!</h1>
-      <h2>Login</h2>
+export default function LoginPage() {
+  return (
+    <div className="login-container">
+      <h2>Log in</h2>
       <input
-      type='text'
-      placeholder="Enter Email"
+        type='text'
+        placeholder="Enter Email"
+        className="login-input"
       />
       <input
-      type='text'
-      placeholder="Enter Password"
+        type='password'
+        placeholder="Enter Password"
+        className="login-input"
       />
-      <button ><a href="/home">Login</a></button>
+      <button className="login-button"><a href="/home">Login</a></button>
     </div>
-  )
+  );
 }
