@@ -57,10 +57,10 @@ export default function BreweryFilter() {
             Search 🍺
           </button>
         </form>
-        {breweries.length > 0 ? (
-          <ul className="breweries-list">
-            {breweries.map((brewery) => (
-              <li key={brewery.id}>
+        <div className="breweries-grid">
+          {breweries.length > 0 ? (
+            breweries.map((brewery) => (
+              <div key={brewery.id} className="brewery-card">
                 <a href={`/brewery/${brewery.id}`} className="brewery-name">
                   {brewery.name}
                 </a>
@@ -68,10 +68,8 @@ export default function BreweryFilter() {
                   Brewery Type: {brewery.brewery_type}
                 </p>
                 <p className="brewery-location">
-                  Brewery Location: {brewery.street}
+                  Brewery Location: {brewery.street}, {brewery.city}, {brewery.state}
                 </p>
-                <p className="brewery-city">Brewery City: {brewery.city}</p>
-                <p className="brewery-state">Brewery State: {brewery.state}</p>
                 <p className="brewery-phone">
                   Brewery Phone #: <a href={`tel:${brewery.phone}`}>{brewery.phone}</a>
                 </p>
@@ -90,10 +88,13 @@ export default function BreweryFilter() {
                     </a>
                   </p>
                 )}
-              </li>
-            ))}
-          </ul>
-        ) : null}
+              </div>
+            ))
+          ) : (
+            <p>No breweries found.</p>
+          )}
+        </div>
+
       </div>
     </div>
   );
