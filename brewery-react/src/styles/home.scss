@@ -33,6 +33,7 @@ form {
       font-size: 1.2rem;
       width: 100%;
       max-width: 15rem;
+      font-family: avenir!important;
     }
   }
 
@@ -68,9 +69,12 @@ form {
 
 /* Style for each brewery card */
 .brewery-card {
-  background-color: #fff;
+  background-color: #232c36;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-family: avenir!important;
 }
 
 /* Style for the brewery name */
@@ -78,11 +82,11 @@ form {
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 
 .brewery-name:hover {
-  color: #000;
+  color: #c45959;
 }
 
 /* Style for the brewery type, location, phone, and website */
@@ -95,12 +99,12 @@ form {
 }
 
 .brewery-phone a {
-  color: #000;
+  color: #3698f3;
 }
 
 .brewery-website a {
   text-decoration: none;
-  color: #0072c6;
+  color: #3698f3;
 }
 
 .brewery-website a:hover {

@@ -91,7 +91,7 @@ export default function BreweryFilter() {
               </div>
             ))
           ) : (
-            <p>No breweries found.</p>
+            <p></p>
           )}
         </div>
 
