@@ -1,0 +1,110 @@
+// Define the base styles for the form
+body {
+  background-image: url('/brewerybackground.jpg');
+  background-size: 110%;
+}
+form {
+  display:flex;
+  flex-direction:row;
+  align-items:self-start;
+  padding-top: 28rem;
+  font-size: 1.6rem;
+  margin-left: 5rem;
+  justify-content: space-around;
+  font-family: avenir!important;
+  font-weight: 800;
+
+
+  label {
+    display: flex;
+    flex-direction:row;
+    align-items:flex-start;
+    padding-top: 1.4rem;
+    font-size: 1.4rem;
+    padding-right: 0.5rem;
+    padding-left: 1rem;
+    color: #fff;
+
+    input[type="text"] {
+      padding: 0.3rem;
+      border: none;
+      border-radius: 0.1rem;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      font-size: 1.2rem;
+      width: 100%;
+      max-width: 15rem;
+    }
+  }
+
+  button[type="submit"] {
+    background-color: #3b4133;
+    font-family: avenir!important;
+    color: #fff;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.8rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10rem;
+
+    &:hover {
+      background-color: #9a9358;
+    }
+  }
+}
+
+// Define the styles for the breweries list
+ul {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+
+  li {
+    background-color: #e9d8a5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      color: #3b503c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #004499;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a[href^="tel:"] {
+      color: #2d849a;
+      text-decoration: none;
+    }
+
+    a[target="_blank"] {
+      font-weight: normal;
+      color: #820404;
+
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+}
