@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import '../styles/userfavs.scss';
 
 export default function UserFavBreweries() {
-
   const [favourites, setFavourites] = useState([]);
 
   useEffect(() => {
@@ -17,15 +17,19 @@ export default function UserFavBreweries() {
   }, [])
 
   return (
-    <div>
+    <div className="user-fav-breweries">
       {favourites.map(favourite => (
-        <div key={favourite.id}>
-          <p> Brewery Name: {favourite.name}</p>
-          <p>Brewery Location: {favourite.street}</p>
-          <p>Brewery City: {favourite.city}</p>
-          <p>Brewery State: {favourite.state}</p>
-          <p>Brewery Phone #: <a href="tel:"> {favourite.phone}</a></p>
-          <p>Website: {favourite.website_url}</p>
+        <div key={favourite.id} className="brewery-card">
+          <div className="card-image" style={{ backgroundImage: `url(${favourite.image_url})` }}>
+            <div className="card-details">
+              <h4>{favourite.name}</h4>
+              <p>Brewery Location: {favourite.street}</p>
+              <p>Brewery City: {favourite.city}</p>
+              <p>Brewery State: {favourite.state}</p>
+              <p>Brewery Phone #: <a href={`tel:${favourite.phone}`}>{favourite.phone}</a></p>
+              <p>Website: <a href={favourite.website_url}>{favourite.website_url}</a></p>
+            </div>
+          </div>
         </div>
       ))}
     </div>

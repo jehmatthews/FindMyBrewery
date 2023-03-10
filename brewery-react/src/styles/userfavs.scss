@@ -1,0 +1,45 @@
+.user-fav-breweries {
+  display: flex;
+  flex-wrap: wrap;
+
+  .brewery-card {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+
+    .card-image {
+      height: 200px;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+
+      .card-details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+
+        h4 {
+          margin: 0;
+        }
+
+        p {
+          font-size: 12px;
+          margin: 5px 0;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
