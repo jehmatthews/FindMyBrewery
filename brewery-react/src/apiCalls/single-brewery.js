@@ -50,7 +50,7 @@ function SingleBrewery(props) {
             insertBrewery(paramsID);
           }}
         >
-          Add to Favourites
+          <a href="/brewery/favourites">Add to Favourites</a>
         </button>
       </ul>
     </div>
