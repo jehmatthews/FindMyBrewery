@@ -23,16 +23,19 @@ export default function BreweryFilter() {
   return (
     <div className="container">
       <Navigation />
-      <div className="message">
-        Find a brewery!
+        <div className="intro-text">
+          <h1 className="intro-heading">Welcome to FindMyBrewery</h1>
+          <p className="intro-paragraph">Enter a city, state, or country to find breweries near you.</p>
+        </div>
         <form className="form" onSubmit={handleSubmit}>
-          <label>
+          <label style={{ marginRight: '10px' }}>
             City:
             <input
               type="text"
               className="input"
               value={city}
               onChange={(e) => setCity(e.target.value)}
+              style={{ paddingLeft: '10px' }}
             />
           </label>
           <label>
@@ -96,6 +99,5 @@ export default function BreweryFilter() {
         </div>
 
       </div>
-    </div>
   );
 };

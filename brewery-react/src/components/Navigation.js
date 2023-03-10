@@ -5,7 +5,9 @@ function Navigation() {
   return (
     <nav>
       <div className="nav-container">
-        <h1 className="logo">FindMyBrewery</h1>
+        <a href="/home" style={{ textDecoration: 'none !important', color: 'white' }}>
+          <h1 className="logo">FindMyBrewery</h1>
+        </a>
         <div className="nav-menu">
           <h2 className="username">Hello, King</h2>
           <div className="dropdown">

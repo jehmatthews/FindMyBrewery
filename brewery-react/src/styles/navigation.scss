@@ -2,11 +2,13 @@ nav {
   background-color: #3b4133;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 10px;
-  position: fixed;
+  position:fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
   color:#fff;
   font-family: avenir!important;
+  top: 0;
+  left: 0;
 }
 
 .nav-container {
@@ -67,6 +69,7 @@ nav {
   border: none;
   cursor:auto;
   border-radius: 0.3rem;
+  font-family: avenir!important;
 }
 
 @media (max-width: 768px) {
