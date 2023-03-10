@@ -2,6 +2,7 @@
   "name": "y",
   "version": "0.0.0",
   "private": true,
+  "proxy": "http://localhost:3002",
   "scripts": {
     "start": "node ./db/www",
     "local": "nodemon ./db/www"

@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const getFavourites = require('../db/queries/getFavouritesById')
+const getFavouritesById = require('../db/queries/getFavouritesById');
 
 router.get('/favourites', (req, res) => {
-  getFavourites()
+  getFavouritesById()
     .then(favourites => {
       res.json(favourites);
     })
