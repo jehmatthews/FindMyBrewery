@@ -21,8 +21,6 @@ function SingleBrewery(props) {
       <Navigation />
       <ul>
         <h1>{brewery.name}</h1>
-
-        <p>Brewery Type: {brewery.brewery_type}</p>
         <p>Brewery Location: {brewery.street}</p>
         <p>Brewery City: {brewery.city}</p>
         <p>Brewery State: {brewery.state}</p>

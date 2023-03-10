@@ -23,7 +23,6 @@ function RandomBrewery() {
           <li key={brewery.id}>
             {" "}
             <a href={`/brewery/${brewery.id}`}>{brewery.name}</a>
-            <p>Brewery Type: {brewery.brewery_type}</p>
             <p>Brewery Location: {brewery.street}</p>
             <p>Brewery City: {brewery.city}</p>
             <p>Brewery State: {brewery.state}</p>
