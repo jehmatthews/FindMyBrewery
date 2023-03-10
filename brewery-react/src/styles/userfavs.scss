@@ -1,10 +1,11 @@
 .user-fav-breweries {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 5rem;
 
   .brewery-card {
     width: 300px;
-    margin: 10px;
+    margin: 50px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
@@ -21,7 +22,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: #ad4545;;
         padding: 10px;
         color: #fff;
         text-align: center;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/userfavs.scss';
+import Navigation from "./Navigation";
 
 export default function UserFavBreweries() {
   const [favourites, setFavourites] = useState([]);
@@ -18,6 +19,7 @@ export default function UserFavBreweries() {
 
   return (
     <div className="user-fav-breweries">
+      <Navigation />
       {favourites.map(favourite => (
         <div key={favourite.id} className="brewery-card">
           <div className="card-image" style={{ backgroundImage: `url(${favourite.image_url})` }}>
