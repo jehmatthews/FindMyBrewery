@@ -5,7 +5,7 @@ import { useLocation, useParams } from "react-router-dom";
 import insertBrewery from "../helpers/insertBrewery";
 import '../styles/singlebrewery.scss';
 
-function SingleBrewery(props) {
+function SingleBreweryFav(props) {
   const params = useParams();
   const paramsID = params.id;
   const [brewery, setBreweries] = useState([]);
@@ -40,8 +40,8 @@ function SingleBrewery(props) {
             )}
           </li>
           <li className="add-to-favorites">
-            <button className="add-to-favorites-button" onClick={() => { insertBrewery(paramsID); }}>
-             <a href="/breweries/favourites">Add to Favorites</a> 
+            <button className="add-to-favorites-button" onClick={() => {}}>
+            <a href="/breweries/favourites">Added to Favourites</a> 
             </button>
           </li>
         </ul>
@@ -51,4 +51,4 @@ function SingleBrewery(props) {
   );
 }
 
-export default SingleBrewery;
+export default SingleBreweryFav;

@@ -30,7 +30,7 @@ export default function UserFavBreweries() {
           >
             <div className="card-details">
               <h4>
-                <a href={`/brewery/${favourite.id}`}>{favourite.name}</a>
+                <a href={`/brewery/${favourite.id}/favourites`}>{favourite.name}</a>
               </h4>
               <p>Brewery Location: {favourite.street}</p>
               <p>Brewery City: {favourite.city}</p>

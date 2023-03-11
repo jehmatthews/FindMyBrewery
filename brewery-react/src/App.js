@@ -10,6 +10,7 @@ import FilteredBreweries from "./apiCalls/filtered-breweries";
 import LoginPage from "./components/loginPage";
 import SingleBrewery from "./apiCalls/single-brewery";
 import UserFavBreweries from './components/UserFavs';
+import SingleBreweryFav from "./apiCalls/singleFav";
 
 
 export default function App() {
@@ -26,7 +27,8 @@ export default function App() {
           element={<FilteredBreweries />}
         ></Route>
         <Route path="/brewery/:id" element={<SingleBrewery />} />
-        <Route path="/brewery/favourites" element={<UserFavBreweries />}></Route>
+        <Route path="/breweries/favourites" element={<UserFavBreweries />}></Route>
+        <Route path="/brewery/:id/favourites" element={<SingleBreweryFav />}></Route>
       </Routes>
     </BrowserRouter>
   );

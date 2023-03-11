@@ -14,7 +14,7 @@ function Navigation() {
             <button className="dropbtn">Menu ☰</button>
             <div className="dropdown-content">
               <a href="/home">Home</a>
-              <a href="/brewery/favourites">My Favourites</a>
+              <a href="/breweries/favourites">My Favourites</a>
               <a href="/brewery/random">Random Brewery!</a>
               <a href='/'>Logout</a>
             </div>
