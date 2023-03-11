@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../components/Navigation";
 import insertBrewery from "../helpers/insertBrewery";
+import '../styles/randomBrewery.scss';
 
 function RandomBrewery() {
   const [breweries, setBreweries] = useState([]);
