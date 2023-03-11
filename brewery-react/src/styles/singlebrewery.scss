@@ -1,0 +1,78 @@
+.single-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 10rem;
+}
+
+.brewery-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.brewery-name {
+  font-size: 2em;
+  margin: 0 0 10px;
+}
+
+.brewery-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brewery-details li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.brewery-details .label {
+  font-weight: bold;
+}
+
+.brewery-phone a {
+  color: #4980ef;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.brewery-phone a:hover {
+  border-bottom-color: transparent;
+}
+
+.website-link {
+  color: #2961d3;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.website-link:hover {
+  border-bottom-color: transparent;
+}
+
+.website-unavailable {
+  color: #aaa;
+  font-style: italic;
+}
+
+.add-to-favorites {
+  margin-top: 20px;
+}
+
+.add-to-favorites-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-favorites-button:hover {
+  background-color: #555;
+}
+

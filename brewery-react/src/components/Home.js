@@ -67,9 +67,6 @@ export default function BreweryFilter() {
                 <a href={`/brewery/${brewery.id}`} className="brewery-name">
                   {brewery.name}
                 </a>
-                <p className="brewery-type">
-                  Brewery Type: {brewery.brewery_type}
-                </p>
                 <p className="brewery-location">
                   Brewery Location: {brewery.street}, {brewery.city}, {brewery.state}
                 </p>
