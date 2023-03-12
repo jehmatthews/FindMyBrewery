@@ -1,12 +1,12 @@
 import React from "react";
 import { redirect } from "react-router-dom";
 import '../styles/login.scss';
-import Navigation from './Navigation';
+import LoginNavigation from "./logInNav";
 
 export default function LoginPage() {
   return (
     <div className="login-container">
-      <Navigation />
+      <LoginNavigation />
         <h2>Log in</h2>
         <input
           type='text'
