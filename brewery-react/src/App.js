@@ -11,7 +11,7 @@ import LoginPage from "./components/loginPage";
 import SingleBrewery from "./apiCalls/single-brewery";
 import UserFavBreweries from './components/UserFavs';
 import SingleBreweryFav from "./apiCalls/singleFav";
-import Comments from './components/Comments';
+import CommentsPage from './components/Comments';
 
 
 export default function App() {

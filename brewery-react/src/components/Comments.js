@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/comments.scss';
+import Navigation from './Navigation';
 
-const CommentsPage = () => {
+export default function CommentsPage() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
 
@@ -12,30 +13,35 @@ const CommentsPage = () => {
   };
 
   return (
-    <Wrapper>
-      <title>Comments</title>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="new-comment">Leave a comment:</label>
-        <textarea
-          id="new-comment"
-          value={newComment}
-          onChange={(event) => setNewComment(event.target.value)}
-          required
-        />
-        <button type="submit">Submit</button>
-      </form>
-      {comments.length > 0 ? (
-        <CommentList>
-          {comments.map((comment, index) => (
-            <Comment key={index}>{comment}</Comment>
-          ))}
-        </CommentList>
-      ) : (
-        <NoComments>No comments yet.</NoComments>
-      )}
-    </Wrapper>
+    <div className="comments-section">
+      <Navigation />
+      <div className="comments">
+        <form onSubmit={handleSubmit}>
+          <label className="comment-command" htmlFor="new-comment"></label>
+            <textarea
+              id="new-comment"
+              value={newComment}
+              onChange={(event) => setNewComment(event.target.value)}
+              placeholder="Leave your comment.."
+              required
+            />
+          <button type="submit">Submit</button>
+        </form>
+        <div className="submitted-comments">
+          <div className="comments-title">Comments:</div>
+            {comments.length > 0 ? (
+              <ol>
+                {comments.map((comment, index) => (
+                  <div className="comment" key={index}>{comment}</div>
+                ))}
+              </ol>
+            ) : (
+              <div className="no-comment">No comments yet.</div>
+            )}
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default CommentsPage;
 

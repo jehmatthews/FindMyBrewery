@@ -69,7 +69,7 @@ function SingleBrewery(props) {
                 target="_blank"
                 href={`http://maps.google.com/?q=${breweryAddress}`}
               >
-                FindMyAdress
+                Find Address
               </a>
             </button>
           </li>

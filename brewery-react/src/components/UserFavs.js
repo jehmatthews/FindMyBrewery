@@ -60,12 +60,12 @@ export default function UserFavBreweries() {
                     {favourite.website_url}
                   </a>
                 </p>
-                <button
+                <button 
                   onClick={() => {
                     deleteBrewery(favourite.id);
                   }}
                 >
-                  Delete Brewery
+                  <a className="delete-button">Delete Brewery</a>
                 </button>
 
                 <button>
@@ -81,7 +81,7 @@ export default function UserFavBreweries() {
                       favourite.postal_code
                     }`}
                   >
-                    FindMyAdress
+                    Find Address
                   </a>
                 </button>
               </div>

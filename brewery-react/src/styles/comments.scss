@@ -1,77 +1,93 @@
-/* Wrapper styles */
-.Wrapper {
-    margin: 20px auto;
-    max-width: 600px;
-  }
+/* comments.css */
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-family: avenir!important;
+}
+
+.comments {
+  width: 60%;
+  margin-top: 150px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #030303;
+}
+
+.comments form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.comment-command {
+  margin-left: -15px;
+  font-family: avenir!important;
+  color: rgb(22, 22, 22);
+}
+
+.comments label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comments textarea {
+  height: 100px;
+  margin-bottom: 2px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #030303;
+  font-size: 20px;
+  width: 880px;
+  background-color: #fcfbfb;
+  font-family: avenir!important;
+}
+
+.comments button[type="submit"] {
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fffdfd;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.comments-title {
+  color:#0c0c0c;
+  font-size: 28px;
+  margin-left: 75px;
+  padding-top: 5px;
+}
+.comments ol {
+  list-style-type:circle;
+  padding: 30px;
+  width: 1000px;
+  margin-left: 50px;
+  margin-right: 100px;
   
-  /* Title styles */
-  .Title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  /* Form styles */
-  .Form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  /* Label styles */
-  .Label {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  /* Textarea styles */
-  .Textarea {
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  /* Button styles */
-  .Button {
-    font-size: 16px;
-    padding: 10px;
-    background-color: #0077cc;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .Button:hover {
-    background-color: #005fa3;
-  }
-  
-  /* CommentList styles */
-  .CommentList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Comment styles */
-  .Comment {
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* NoComments styles */
-  .NoComments {
-    font-size: 16px;
-    font-style: italic;
-    color: #777;
-  }
+}
+
+.comments .comment {
+  // background-color: #ddd6d6;
+  border-radius: 0px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  margin-right: 5rem;
+}
+
+.comments h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.no-comment {
+  color: rgb(203, 93, 93);
+  font-size: 20px;
+  margin-left: 75px;
+  padding-top: 10px;
+  padding-bottom: 2rem;
+}
+
   
