@@ -41,7 +41,7 @@ function SingleBrewery(props) {
           </li>
           <li className="add-to-favorites">
             <button className="add-to-favorites-button" onClick={() => { insertBrewery(paramsID); }}>
-             <a href="/breweries/favourites">Add to Favorites</a> 
+             <a href="/breweries/favourites">Add to Favourites</a> 
             </button>
           </li>
         </ul>

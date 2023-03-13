@@ -1,7 +1,7 @@
 // Define the base styles for the form
 body {
-  background-image: url('/darkbeerbackground.jpg');
-  background-size: 110%;
+  background-image: url('/lightsbackground.jpg');
+  background-size: 120%;
 }
 
 .intro-text {
@@ -11,7 +11,7 @@ body {
   align-items: center;
   margin: 50px 0;
   padding-top: 2rem;
-  color:#fff;
+  color:#f9dfdf;
   font-family: avenir!important;
 
 }
@@ -129,12 +129,13 @@ form {
 }
 
 .brewery-phone a {
-  color: #3698f3;
+  color:#57bbf4;
+  text-decoration: none;
 }
 
 .brewery-website a {
   text-decoration: none;
-  color: #3698f3;
+  color:#57bbf4;
 }
 
 .brewery-website a:hover {

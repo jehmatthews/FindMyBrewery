@@ -22,8 +22,9 @@ export default function UserFavBreweries() {
   return (
     <div className="user-fav-breweries">
       <Navigation />
-      <div className="intro-text">
+      <div className="favourites-text">
         <h1 className="intro-heading">My Favourites</h1>
+        <p className="favourites-paragraph">Here is a list of your favourite breweries:</p>
       </div>
       <div className="brewery-cards-container">
         {favourites.map((favourite) => (
@@ -39,11 +40,11 @@ export default function UserFavBreweries() {
                 <p>Brewery Location: {favourite.street}, {favourite.city}, {favourite.state}</p>
                 <p>
                   Brewery Phone #:{" "}
-                  <a href={`tel:${favourite.phone}`}>{favourite.phone}</a>
+                  <a className="phone-link" href={`tel:${favourite.phone}`}>{favourite.phone}</a>
                 </p>
                 <p>
                   Website:{" "}
-                  <a href={favourite.website_url}>{favourite.website_url}</a>
+                  <a className="website-link" href={favourite.website_url}>{favourite.website_url}</a>
                 </p>
                 <button
                   onClick={() => {

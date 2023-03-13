@@ -1,14 +1,21 @@
-// .intro-text {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 50px 0;
-//   padding-top: 2rem;
-//   color:#fff;
-//   font-family: avenir!important;
+.favourites-text {
+  display: flex;
+  flex-direction: column;
+  justify-content:first baseline;
+  align-items:start;
+  margin: 50px 0;
+  padding-top: 2rem;
+  color:#f9e4e4;
+  font-family: avenir!important;
+  margin-left: 3rem;
 
-// }
+}
+
+.favourites-paragraph {
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-family: avenir!important;
+}
 
 .user-fav-breweries {
   max-width: 800px;
@@ -40,7 +47,7 @@
         background-color: #232c36;
         padding: 10px;
         color: #fff;
-        text-align: center;
+        text-align:left;
         font-size: 30px;
         height: 180px;
 
@@ -58,11 +65,20 @@
           text-decoration: underline;
         }
 
+        .phone-link {
+          color: #57bbf4;
+        }
+
+        .website-link {
+          color:#57bbf4;
+        }
+
         button {
           height: 30px;
           background-color: rgb(206, 83, 83);
           color: #fff;
           border-radius: 0.4rem;
+          cursor: pointer;
         }
         button:hover {
           text-decoration: underline;

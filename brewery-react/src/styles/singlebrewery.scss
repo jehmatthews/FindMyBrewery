@@ -7,7 +7,7 @@
 .brewery-card {
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .brewery-name {
@@ -47,10 +47,12 @@
   text-decoration: none;
   border-bottom: 1px solid #333;
   transition: border-bottom-color 0.3s ease;
+  padding-left: 5px;
 }
 
 .website-link:hover {
   border-bottom-color: transparent;
+  padding-left: 5px;
 }
 
 .website-unavailable {
@@ -63,16 +65,18 @@
 }
 
 .add-to-favorites-button {
-  background-color: #333;
-  color: #fff;
+  background-color: #36a848;
+  padding: 10px;
   border: none;
-  padding: 10px 20px;
-  font-size: 1.2em;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  margin-top: 10px;
 
-.add-to-favorites-button:hover {
-  background-color: #555;
+  &:hover {
+    background-color: #25813c;
+  }
 }
 
