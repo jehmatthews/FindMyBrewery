@@ -62,22 +62,17 @@
   margin-left: 15px;
   margin-top: -20px;
 }
-.comments ol {
-  list-style-type:circle;
-  padding: 30px;
-  width: 0px;
-  margin-left: 50px;
-  margin-right: 100px;
-  
-}
 
-.comments .comment {
-  // background-color: #ddd6d6;
+.comment {
   border-radius: 0px;
   padding: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid black;
   margin-right: 5rem;
+  color: black;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .comments h2 {
@@ -91,6 +86,18 @@
   margin-left: 15px;
   padding-top: 10px;
   padding-bottom: 1rem;
+  align-items: flex-end;
+}
+
+.delete-button {
+  background-color: none;
+  font-family: avenir!important;
+  float: right;
+}
+
+.user {
+  padding-left: 15px;
+  color:rgb(22, 22, 22);
 }
 
   

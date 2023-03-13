@@ -9,7 +9,7 @@ function Navigation() {
           <h1 className="logo">FindMyBrewery</h1>
         </a>
         <div className="nav-menu">
-          <h2 className="username">Hello, King</h2>
+          <h2 className="username">Hello, John Smith</h2>
           <div className="dropdown">
             <button className="dropbtn">Menu ☰</button>
             <div className="dropdown-content">

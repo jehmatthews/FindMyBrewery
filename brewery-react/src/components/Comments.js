@@ -45,10 +45,10 @@ export default function CommentsPage(props) {
             {comments ? (
               <ol>
                 {comments.map((comments, index) => (
-                  <div className="comment" key={index}>{comments.comment}
-                  <button onClick={() => {
-                    deleteComment(comments.comment);
-                  }}>Delete Comment</button>
+                  <div className="comment" key={index}>John Smith: "{comments.comment}"
+                    <button className="delete-button" onClick={() => {
+                      deleteComment(comments.comment);
+                    }}>&#128465;</button>
                   </div>
                 ))}
               </ol>

@@ -74,8 +74,8 @@ function SingleBrewery(props) {
               </a>
             </button>
             <CommentsPage
-            id = {paramsID}
-             />
+              id = {paramsID}
+            />
           </li>
         </ul>
       </div>
