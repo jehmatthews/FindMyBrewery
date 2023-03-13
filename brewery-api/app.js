@@ -10,6 +10,7 @@ const favouritesRouter = require('./routes/favourites');
 const deleteFavouritesRouter = require('./routes/deleteFavouritesRoute')
 const insertCommentsRouter = require('./routes/comments')
 const commentsRouter = require('./routes/getComments')
+const deleteCommentsRouter = require('./routes/deleteComments')
 
 const app = express();
 
@@ -28,7 +29,8 @@ app.use('/api/breweries', breweryRouter);
 app.use('/api/breweries', favouritesRouter);
 app.use('/api/breweries', deleteFavouritesRouter);
 app.use('/api/brewery', insertCommentsRouter);
-app.use('/api/breweries', commentsRouter)
+app.use('/api/breweries', commentsRouter);
+app.use('/api/brewery', deleteCommentsRouter);
 
 
 
