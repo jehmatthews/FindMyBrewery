@@ -2,14 +2,14 @@
 .comments-section {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items:first baseline;
   font-family: avenir!important;
 }
 
 .comments {
-  width: 60%;
-  margin-top: 150px;
-  background-color: white;
+  width: 100%;
+  margin-top: 50px;
+  background-color: rgb(224, 214, 214);
   border-radius: 5px;
   border: 1px solid #030303;
 }
@@ -21,7 +21,7 @@
 }
 
 .comment-command {
-  margin-left: -15px;
+  margin-left: 0px;
   font-family: avenir!important;
   color: rgb(22, 22, 22);
 }
@@ -32,7 +32,7 @@
 }
 
 .comments textarea {
-  height: 100px;
+  height: 50px;
   margin-bottom: 2px;
   padding: 10px;
   border-radius: 4px;
@@ -41,6 +41,8 @@
   width: 880px;
   background-color: #fcfbfb;
   font-family: avenir!important;
+  margin-left: -60px;
+  margin-right: 12px;
 }
 
 .comments button[type="submit"] {
@@ -49,20 +51,21 @@
   border: none;
   background-color: #007bff;
   color: #fffdfd;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
+  margin-left: -60px;
 }
 
 .comments-title {
   color:#0c0c0c;
-  font-size: 28px;
-  margin-left: 75px;
-  padding-top: 5px;
+  font-size: 25px;
+  margin-left: 15px;
+  margin-top: -20px;
 }
 .comments ol {
   list-style-type:circle;
   padding: 30px;
-  width: 1000px;
+  width: 0px;
   margin-left: 50px;
   margin-right: 100px;
   
@@ -78,16 +81,16 @@
 }
 
 .comments h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .no-comment {
   color: rgb(203, 93, 93);
-  font-size: 20px;
-  margin-left: 75px;
+  font-size: 18px;
+  margin-left: 15px;
   padding-top: 10px;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
   
