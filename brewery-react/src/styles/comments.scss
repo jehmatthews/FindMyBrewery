@@ -1,0 +1,77 @@
+/* Wrapper styles */
+.Wrapper {
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Title styles */
+  .Title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Form styles */
+  .Form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  /* Label styles */
+  .Label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Textarea styles */
+  .Textarea {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Button styles */
+  .Button {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .Button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* CommentList styles */
+  .CommentList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Comment styles */
+  .Comment {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* NoComments styles */
+  .NoComments {
+    font-size: 16px;
+    font-style: italic;
+    color: #777;
+  }
+  
