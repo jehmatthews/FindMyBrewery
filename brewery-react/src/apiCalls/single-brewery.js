@@ -73,7 +73,9 @@ function SingleBrewery(props) {
                 Find Address
               </a>
             </button>
-            <CommentsPage />
+            <CommentsPage
+            id = {paramsID}
+             />
           </li>
         </ul>
       </div>

@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import '../styles/comments.scss';
 import Navigation from './Navigation';
+import insertComment from '../helpers/insertComment';
 
-export default function CommentsPage() {
+export default function CommentsPage(props) {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
 
+  useEffect(() => {
+    axios
+      .get(`/api/breweries/comments/${props.id}`)
+      .then((response) => {
+        console.log("response", response);
+        setComments(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   const handleSubmit = (event) => {
-    event.preventDefault();
-    setComments([...comments, newComment]);
-    setNewComment('');
+    insertComment(props.id, newComment)
   };
 
   return (
@@ -29,10 +41,10 @@ export default function CommentsPage() {
         </form>
         <div className="submitted-comments">
           <div className="comments-title">Comments:</div>
-            {comments.length > 0 ? (
+            {comments ? (
               <ol>
-                {comments.map((comment, index) => (
-                  <div className="comment" key={index}>{comment}</div>
+                {comments.map((comments, index) => (
+                  <div className="comment" key={index}>{comments.comment}</div>
                 ))}
               </ol>
             ) : (

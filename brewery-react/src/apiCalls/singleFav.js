@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import { useLocation, useParams } from "react-router-dom";
 import insertBrewery from "../helpers/insertBrewery";
 import "../styles/singlebrewery.scss";
+import CommentsPage from "../components/Comments";
 
 function SingleBreweryFav(props) {
   const params = useParams();
@@ -67,6 +68,9 @@ function SingleBreweryFav(props) {
                 FindMyAdress
               </a>
             </button>
+            <CommentsPage
+            id = {paramsID}
+             />
           </li>
         </ul>
       </div>
