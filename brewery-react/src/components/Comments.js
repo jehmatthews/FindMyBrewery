@@ -3,6 +3,7 @@ import axios from "axios";
 import '../styles/comments.scss';
 import Navigation from './Navigation';
 import insertComment from '../helpers/insertComment';
+import deleteComment from "../helpers/deleteComment";
 
 export default function CommentsPage(props) {
   const [comments, setComments] = useState([]);
@@ -44,7 +45,11 @@ export default function CommentsPage(props) {
             {comments ? (
               <ol>
                 {comments.map((comments, index) => (
-                  <div className="comment" key={index}>{comments.comment}</div>
+                  <div className="comment" key={index}>{comments.comment}
+                  <button onClick={() => {
+                    deleteComment(comments.comment);
+                  }}>Delete Comment</button>
+                  </div>
                 ))}
               </ol>
             ) : (
