@@ -3,7 +3,7 @@ import axios from "axios";
 import Navigation from "../components/Navigation";
 import { useLocation, useParams } from "react-router-dom";
 import insertBrewery from "../helpers/insertBrewery";
-import '../styles/singlebrewery.scss';
+import "../styles/singlebrewery.scss";
 
 function SingleBrewery(props) {
   const params = useParams();
@@ -17,6 +17,15 @@ function SingleBrewery(props) {
       .catch((error) => console.log(error));
   }, []);
 
+  const breweryAddress =
+    brewery.street +
+    ", " +
+    brewery.city +
+    ", " +
+    brewery.state +
+    " " +
+    brewery.postal_code;
+
   return (
     <div className="single-container">
       <Navigation />
@@ -24,15 +33,21 @@ function SingleBrewery(props) {
         <h1 className="brewery-name">{brewery.name}</h1>
         <ul className="brewery-details">
           <li className="brewery-location">
-            <span className="label">Location:</span> {brewery.street}, {brewery.city}, {brewery.state}
+            <span className="label">Location:</span> {brewery.street},{" "}
+            {brewery.city}, {brewery.state}
           </li>
           <li className="brewery-phone">
-            <span className="label">Phone:</span> <a href={`tel:${brewery.phone}`}>{brewery.phone}</a>
+            <span className="label">Phone:</span>{" "}
+            <a href={`tel:${brewery.phone}`}>{brewery.phone}</a>
           </li>
           <li className="brewery-website">
             <span className="label">Website:</span>
             {brewery.website_url ? (
-              <a className="website-link" target="_blank" href={brewery.website_url}>
+              <a
+                className="website-link"
+                target="_blank"
+                href={brewery.website_url}
+              >
                 {brewery.name}
               </a>
             ) : (
@@ -40,14 +55,27 @@ function SingleBrewery(props) {
             )}
           </li>
           <li className="add-to-favorites">
-            <button className="add-to-favorites-button" onClick={() => { insertBrewery(paramsID); }}>
-             <a href="/breweries/favourites">Add to Favourites</a> 
+            <button
+              className="add-to-favorites-button"
+              onClick={() => {
+                insertBrewery(paramsID);
+              }}
+            >
+              <a href="/breweries/favourites">Add to Favourites</a>
+            </button>
+            <button>
+              <a
+                className="add-to-favorites-button"
+                target="_blank"
+                href={`http://maps.google.com/?q=${breweryAddress}`}
+              >
+                FindMyAdress
+              </a>
             </button>
           </li>
         </ul>
       </div>
     </div>
-
   );
 }
 
