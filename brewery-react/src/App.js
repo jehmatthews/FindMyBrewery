@@ -30,7 +30,7 @@ export default function App() {
         <Route path="/brewery/:id" element={<SingleBrewery />} />
         <Route path="/breweries/favourites" element={<UserFavBreweries />}></Route>
         <Route path="/brewery/:id/favourites" element={<SingleBreweryFav />}></Route>
-        <Route path="/brewery/comments" element={<CommentsPage />}></Route>
+        <Route path="/breweries/comments" element={<CommentsPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
