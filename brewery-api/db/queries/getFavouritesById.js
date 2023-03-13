@@ -1,7 +1,6 @@
 const db = require('../connection');
 
 function getFavouritesById() {
-  console.log('hello')
   return db.query(`SELECT *
   FROM user_favourites
   JOIN breweries ON brewery_id = breweries.id

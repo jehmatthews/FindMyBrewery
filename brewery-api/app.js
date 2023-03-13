@@ -8,6 +8,8 @@ const logger = require('morgan');
 const breweryRouter = require('./routes/application');
 const favouritesRouter = require('./routes/favourites');
 const deleteFavouritesRouter = require('./routes/deleteFavouritesRoute')
+const insertCommentsRouter = require('./routes/comments')
+const commentsRouter = require('./routes/getComments')
 
 const app = express();
 
@@ -25,6 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/breweries', breweryRouter);
 app.use('/api/breweries', favouritesRouter);
 app.use('/api/breweries', deleteFavouritesRouter);
+app.use('/api/brewery', insertCommentsRouter);
+app.use('/api/breweries', commentsRouter)
+
 
 
 // catch 404 and forward to error handler
