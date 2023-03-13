@@ -24,7 +24,9 @@ export default function UserFavBreweries() {
       <Navigation />
       <div className="favourites-text">
         <h1 className="intro-heading">My Favourites</h1>
-        <p className="favourites-paragraph">Here is a list of your favourite breweries:</p>
+        <p className="favourites-paragraph">
+          Here is a list of your favourite breweries:
+        </p>
       </div>
       <div className="brewery-cards-container">
         {favourites.map((favourite) => (
@@ -35,16 +37,28 @@ export default function UserFavBreweries() {
             >
               <div className="card-details">
                 <h4>
-                  <a className="brewery-title" href={`/brewery/${favourite.id}/favourites`}>{favourite.name}</a>
+                  <a
+                    className="brewery-title"
+                    href={`/brewery/${favourite.id}/favourites`}
+                  >
+                    {favourite.name}
+                  </a>
                 </h4>
-                <p>Brewery Location: {favourite.street}, {favourite.city}, {favourite.state}</p>
+                <p>
+                  Brewery Location: {favourite.street}, {favourite.city},{" "}
+                  {favourite.state}
+                </p>
                 <p>
                   Brewery Phone #:{" "}
-                  <a className="phone-link" href={`tel:${favourite.phone}`}>{favourite.phone}</a>
+                  <a className="phone-link" href={`tel:${favourite.phone}`}>
+                    {favourite.phone}
+                  </a>
                 </p>
                 <p>
                   Website:{" "}
-                  <a className="website-link" href={favourite.website_url}>{favourite.website_url}</a>
+                  <a className="website-link" href={favourite.website_url}>
+                    {favourite.website_url}
+                  </a>
                 </p>
                 <button
                   onClick={() => {
@@ -53,12 +67,28 @@ export default function UserFavBreweries() {
                 >
                   Delete Brewery
                 </button>
+
+                <button>
+                  <a
+                    target="_blank"
+                    href={`http://maps.google.com/?q=${
+                      favourite.street +
+                      ", " +
+                      favourite.city +
+                      ", " +
+                      favourite.state +
+                      " " +
+                      favourite.postal_code
+                    }`}
+                  >
+                    FindMyAdress
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
-
   );
 }
