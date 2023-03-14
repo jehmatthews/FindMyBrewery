@@ -62,11 +62,11 @@ function SingleBrewery(props) {
                 insertBrewery(paramsID);
               }}
             >
-              <a href="/breweries/favourites">Add to Favourites</a>
+              <a className="add-to-favorites-anchor" href="/breweries/favourites">Add to Favourites</a>
             </button>
             <button className="address-button">
               <a
-            
+                className="address-anchor"
                 target="_blank"
                 href={`http://maps.google.com/?q=${breweryAddress}`}
               >
