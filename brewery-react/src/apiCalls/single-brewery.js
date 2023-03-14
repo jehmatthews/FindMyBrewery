@@ -31,7 +31,7 @@ function SingleBrewery(props) {
     <div className="single-container">
       <Navigation />
       <div className="brewery-card">
-        <h1 className="brewery-name">{brewery.name}</h1>
+        <h1 className="single-brewery-name">{brewery.name}</h1>
         <ul className="brewery-details">
           <li className="brewery-location">
             <span className="label">Location:</span> {brewery.street},{" "}
@@ -66,7 +66,7 @@ function SingleBrewery(props) {
             </button>
             <button>
               <a
-                className="add-to-favorites-button"
+                className="address-button"
                 target="_blank"
                 href={`http://maps.google.com/?q=${breweryAddress}`}
               >

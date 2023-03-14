@@ -13,7 +13,7 @@
   padding: 10px;
 }
 
-.brewery-name {
+.single-brewery-name {
   font-size: 2em;
   margin: 0 0 10px;
 }
@@ -73,6 +73,22 @@
   border: none;
   border-radius: 5px;
   color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #25813c;
+  }
+}
+
+.address-button {
+  background-color: #36a848;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #f8f4f4;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;

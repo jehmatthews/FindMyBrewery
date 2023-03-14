@@ -9,7 +9,7 @@
 .comments {
   width: 100%;
   margin-top: 50px;
-  background-color: rgb(224, 214, 214);
+  background-color: rgb(193, 198, 203);
   border-radius: 5px;
   border: 1px solid #030303;
 }
@@ -39,7 +39,7 @@
   border: 1px solid #030303;
   font-size: 20px;
   width: 880px;
-  background-color: #fcfbfb;
+  background-color: #e8e5e5;
   font-family: avenir!important;
   margin-left: -60px;
   margin-right: 12px;
@@ -61,6 +61,7 @@
   font-size: 25px;
   margin-left: 15px;
   margin-top: -20px;
+  margin-bottom: 10px;
 }
 
 .comment {
@@ -73,6 +74,7 @@
   font-size: 20px;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 0px;
 }
 
 .comments h2 {
@@ -95,9 +97,5 @@
   float: right;
 }
 
-.user {
-  padding-left: 15px;
-  color:rgb(22, 22, 22);
-}
 
   

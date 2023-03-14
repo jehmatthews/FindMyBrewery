@@ -4,6 +4,7 @@ import "../styles/userfavs.scss";
 import Navigation from "./Navigation";
 import deleteBrewery from "../helpers/deleteBrewery";
 
+
 export default function UserFavBreweries() {
   const [favourites, setFavourites] = useState([]);
 
@@ -60,15 +61,8 @@ export default function UserFavBreweries() {
                     {favourite.website_url}
                   </a>
                 </p>
-                <button 
-                  onClick={() => {
-                    deleteBrewery(favourite.id);
-                  }}
-                >
-                  <a className="delete-button">Delete Brewery</a>
-                </button>
 
-                <button>
+                <button className="find-address">
                   <a
                     target="_blank"
                     href={`http://maps.google.com/?q=${
@@ -81,8 +75,17 @@ export default function UserFavBreweries() {
                       favourite.postal_code
                     }`}
                   >
+                    <i className="fas fa-map-marker-alt" style={{ color: 'red' }}></i>
                     Find Address
                   </a>
+                </button>
+
+                <button className="delete-fav"
+                  onClick={() => {
+                    deleteBrewery(favourite.id);
+                  }}
+                >
+                  Delete Brewery
                 </button>
               </div>
             </div>
