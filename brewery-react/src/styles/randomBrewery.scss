@@ -11,17 +11,6 @@
     font-weight: 600;
   }
 
-  .find-address {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-
   .randomize-button {
     padding: 10px;
     border: none;
@@ -86,7 +75,7 @@
 
           a {
             text-decoration: none;
-            color:#57bbf4;
+            // color:#57bbf4;
           }
         }
 
@@ -120,6 +109,8 @@
           font-weight: bold;
           cursor: pointer;
           margin-top: 10px;
+          background-color: #36a848;
+          margin-left: 20px;
         }
 
         .add-to-favorites-button{

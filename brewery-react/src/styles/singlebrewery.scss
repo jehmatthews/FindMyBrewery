@@ -11,6 +11,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
+  
 }
 
 .single-brewery-name {
@@ -65,14 +66,15 @@
 
 .add-to-favorites {
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .add-to-favorites-button {
-  background-color: #36a848;
+  background-color: #85cc8f;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: #fff !important;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -84,7 +86,7 @@
 }
 
 .address-button {
-  background-color: #36a848;
+  background-color: #85cc8f;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -92,10 +94,11 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
 
   &:hover {
-    background-color: #25813c;
+    background-color: #557c5e;
   }
 }
 

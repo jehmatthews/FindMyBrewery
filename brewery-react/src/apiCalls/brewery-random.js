@@ -85,9 +85,8 @@ function RandomBrewery() {
                   </a>
                 </button>
 
-                <button>
+                <button className="find-address">
                   <a
-                    className="find-address"
                     target="_blank"
                     href={`http://maps.google.com/?q=${
                       brewery.street +
