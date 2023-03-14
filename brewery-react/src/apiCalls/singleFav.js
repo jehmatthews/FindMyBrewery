@@ -59,9 +59,8 @@ function SingleBreweryFav(props) {
             <button className="add-to-favorites-button" onClick={() => {}}>
               <a href="/breweries/favourites">Added to Favourites</a>
             </button>
-            <button>
+            <button className="add-to-favorites-button">
               <a
-                className="add-to-favorites-button"
                 target="_blank"
                 href={`http://maps.google.com/?q=${breweryAddress}`}
               >

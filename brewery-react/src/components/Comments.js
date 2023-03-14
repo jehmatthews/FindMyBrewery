@@ -42,7 +42,7 @@ export default function CommentsPage(props) {
         </form>
         <div className="submitted-comments">
           <div className="comments-title">Comments:</div>
-            {comments ? (
+            {comments.length > 0 ? (
               <ol>
                 {comments.map((comments, index) => (
                   <div className="comment" key={index}>John Smith: "{comments.comment}"

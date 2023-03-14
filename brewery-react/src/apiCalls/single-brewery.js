@@ -64,9 +64,9 @@ function SingleBrewery(props) {
             >
               <a href="/breweries/favourites">Add to Favourites</a>
             </button>
-            <button>
+            <button className="address-button">
               <a
-                className="address-button"
+            
                 target="_blank"
                 href={`http://maps.google.com/?q=${breweryAddress}`}
               >
