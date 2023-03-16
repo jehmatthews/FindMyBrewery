@@ -46,7 +46,7 @@ export default function UserFavBreweries() {
                   </a>
                 </h4>
                 <p>
-                  Brewery Location: {favourite.street}, {favourite.city},{" "}
+                  Address: {favourite.street}, {favourite.city},{" "}
                   {favourite.state}
                 </p>
                 <p>
@@ -76,7 +76,7 @@ export default function UserFavBreweries() {
                     }`}
                   >
                     <i className="fas fa-map-marker-alt" style={{ color: 'red' }}></i>
-                    Find Address
+                    Get Directions
                   </a>
                 </button>
 

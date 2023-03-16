@@ -43,7 +43,7 @@ function RandomBrewery() {
                 {brewery.name}
               </a>
               <div className="brewery-details-group">
-                <span className="brewery-details-label">Location:</span>
+                <span className="brewery-details-label">Address:</span>
                 <span className="brewery-details-address">
                   {brewery.street}, {brewery.city}, {brewery.state}
                 </span>
@@ -98,7 +98,7 @@ function RandomBrewery() {
                       brewery.postal_code
                     }`}
                   >
-                    Find Address
+                    Get Directions
                   </a>
                 </button>
               </div>

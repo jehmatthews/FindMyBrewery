@@ -34,7 +34,7 @@ function SingleBreweryFav(props) {
         <h1 className="brewery-name">{brewery.name}</h1>
         <ul className="brewery-details">
           <li className="brewery-location">
-            <span className="label">Location:</span> {brewery.street},{" "}
+            <span className="label">Address:</span> {brewery.street},{" "}
             {brewery.city}, {brewery.state}
           </li>
           <li className="brewery-phone">
@@ -65,7 +65,7 @@ function SingleBreweryFav(props) {
                 target="_blank"
                 href={`http://maps.google.com/?q=${breweryAddress}`}
               >
-                Find Address
+                Get Directions
               </a>
             </button>
             <CommentsPage
